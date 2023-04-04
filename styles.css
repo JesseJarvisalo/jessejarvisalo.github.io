@@ -94,7 +94,7 @@ p {
   font-family: garamond, serif;
 }
 
-.portfolio, .cv, .työpaikkakokemus {
+.portfolio, .cv, .tyopaikkakokemus {
   display: flex;
   flex-direction: column;
   width: 75%;
@@ -197,7 +197,7 @@ footer {
     text-align: center;
   }
 
-  .portfolio, .cv, .työpaikkakokemus {
+  .portfolio, .cv, .tyopaikkakokemus {
     display: flex;
     flex-direction: column;
     width: 90%;
