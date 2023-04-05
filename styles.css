@@ -65,7 +65,7 @@ footer li {
   padding: 0 2rem;
 }
 
-nav a {
+a {
   color: white;
   text-decoration: none;
   font-size: 1rem;
@@ -218,19 +218,28 @@ hr {
     padding-left: 0.5rem;
   }
 
-  ul {
+  nav ul, footer ul {
     flex-direction: row;
     margin-left: 0;
     justify-content: center;
     align-items: center;
   }
 
-  li {
+  nav li {
     padding: 0 0.5rem 0 0.5rem;
   }
 
   a {
     font-size: 0.75rem;
+  }
+
+  footer ul {
+    justify-content: center;
+    margin: 0 auto;
+  }
+  
+  footer li {
+    padding: 0 2rem;
   }
 
   .ota-yhteytta button {
