@@ -157,6 +157,10 @@ video {
   text-align: center;
 }
 
+.toggle-description {
+  color: black;
+}
+
 .cv {
   width: 75%;
   align-items: center;
