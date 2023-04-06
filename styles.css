@@ -5,25 +5,22 @@
 html, body {
   font-family: Tahoma, 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   margin: 0;
-  padding: 0;
 }
 
+/* navigaation osat */ 
 nav {
   width: 100%;
-  height: 100px;
+  height: 80px;
+  position: fixed;
+  top: 0;
   background-color: black;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   display: flex;
   align-items: center;
+  z-index: 100;
 }
 
-footer {
-  width: 100%;
-  height: 50px;
-  background-color: #ffc20e;
-  display: flex;
-  align-items: center;
-}
-
+/* logon asetukset deskariin */ 
 @media only screen and (min-width: 769px) {
 
 .logo {
@@ -56,6 +53,32 @@ nav li {
   padding-right: 2rem;
 }
 
+a:hover {
+  text-decoration: solid 2px underline #ffc20e;
+  text-underline-offset: 0.5rem;
+}
+
+button {
+  border: none;
+  background-color: #ffc20e;
+  border-radius: 25px;
+  padding: 7.5px 15px;
+}
+
+.ota-yhteytta a {
+  color: black;
+  text-decoration: none;
+}
+
+/* footerin osat */ 
+footer {
+  width: 100%;
+  height: 50px;
+  background-color: #ffc20e;
+  display: flex;
+  align-items: center;
+}
+
 footer ul {
   justify-content: center;
   margin: 0 auto;
@@ -63,6 +86,7 @@ footer ul {
 
 footer li {
   padding: 0 2rem;
+  text-align: center;
 }
 
 a {
@@ -76,32 +100,16 @@ footer a {
   color: black;
 }
 
-a:hover {
-  text-decoration: solid 2px underline #ffc20e;
-  text-underline-offset: 0.5rem;
-}
-
 footer a:hover {
   text-decoration: solid 2px underline black;
   text-underline-offset: 0.5rem;
 }
 
-.ota-yhteytta button {
-  border: none;
-  background-color: #ffc20e;
-  border-radius: 25px;
-  padding: 7.5px 15px;
-}
-
-.ota-yhteytta a {
-  color: black;
-  text-decoration: none;
-}
-
+/* esittely-osio */ 
 .oma-kuva-ja-esittely {
   display: flex;
   width: 75%;
-  margin: 1rem auto;
+  margin: 100px auto 50px auto;
   justify-content: center;
   align-items: center;
 }
@@ -120,6 +128,7 @@ p {
   font-family: garamond, serif;
 }
 
+/* portfolio, cv ja työpaikkakokemukset -osiot */ 
 .portfolio, .tyopaikkakokemus {
   display: flex;
   flex-direction: column;
@@ -127,6 +136,25 @@ p {
   margin: 1rem auto;
   justify-content: center;
   align-items: center;
+}
+
+video {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.more {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.dots, .description {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .cv {
@@ -172,11 +200,6 @@ h3 {
   height: auto;
 }
 
-video {
-  max-width: 100%;
-  height: auto;
-}
-
 hr {
   border: none;
   width: 75%;
@@ -184,17 +207,18 @@ hr {
   background-color: #f1eeef;
 }
 
-
+/* asetukset mobiiliin */ 
 @media only screen and (max-width: 768px) {
   nav {
     flex-direction: column;
-    height: auto;
+    height: 80px;
   }
 
   .logo {
     display: flex;
-    text-align: center;
+    margin: 1rem auto auto auto;
     justify-content: center;
+    align-items: center;
     width: 100%;
   }
 
@@ -202,14 +226,13 @@ hr {
     color: white;
     font-size: 0.75rem;
     letter-spacing: 0.25em;
-    margin-top: 0.75rem;
+    margin: 0;
   }
 
   .logo .logon-alateksti {
     color: white;
     font-size: 0.75rem;
     letter-spacing: 0.25em;
-    margin-top: 0.75rem;
   }
 
   .logo .logon-alateksti::before {
@@ -220,7 +243,7 @@ hr {
 
   nav ul, footer ul {
     flex-direction: row;
-    margin-left: 0;
+    margin: auto auto 0.75rem auto;
     justify-content: center;
     align-items: center;
   }
@@ -231,15 +254,6 @@ hr {
 
   a {
     font-size: 0.75rem;
-  }
-
-  footer ul {
-    justify-content: center;
-    margin: 0 auto;
-  }
-  
-  footer li {
-    padding: 0 2rem;
   }
 
   .ota-yhteytta button {
@@ -256,8 +270,8 @@ hr {
   .oma-kuva-ja-esittely img {
     width: 150px;
     height: 150px;
-    margin-bottom: 0.5rem;
-  }
+    margin: 0 0 0.5rem 0;
+    }
   
   .esittely-txt {
     margin-bottom: 0.5rem;
@@ -277,15 +291,29 @@ hr {
     align-items: center;
   }
 
-  hr {
-    width: 90%;
-  }
-
   .brandilogot {
     grid-template-columns: repeat(4, 1fr);
   }
 
   .cv {
+    width: 90%;
+  }
+
+  footer ul {
+    justify-content: center;
+    margin: 0 auto;
+  }
+  
+  footer li {
+    padding: 0 2rem;
+  }
+
+  footer a:hover {
+    text-decoration: solid 2px underline black;
+    text-underline-offset: 0.2rem;
+  }
+
+  hr {
     width: 90%;
   }
 }
