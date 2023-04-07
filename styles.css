@@ -7,6 +7,23 @@ html, body {
   margin: 0;
 }
 
+body {
+  position: relative;
+  background-color: #f1eeef;
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: -80px;
+  left: 10%; /* Adjust this value to set the width of your content section */
+  right: 10%; /* Adjust this value to set the width of your content section */
+  bottom: 0;
+  z-index: -1; /* This will place the pseudo-element behind the other elements */
+  background-color: white;
+  z-index: -1;
+}
+
 /* navigaation osat */ 
 nav {
   width: 100%;
@@ -192,7 +209,6 @@ h3 {
 }
 
 .tyopaikkakokemus {
-  width: 90%;
   margin-bottom: 3rem;
 }
 
@@ -218,6 +234,11 @@ hr {
 
 /* asetukset mobiiliin */ 
 @media only screen and (max-width: 768px) {
+  body::before {
+    left: 2%; /* Adjust this value to set the width of your content section */
+    right: 2%; /* Adjust this value to set the width of your content section */
+  }
+
   nav {
     flex-direction: column;
     height: 80px;
