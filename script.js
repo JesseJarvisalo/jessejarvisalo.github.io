@@ -17,3 +17,23 @@ toggleButtons.forEach(function(button) {
     }
   });
 });
+
+// Smooth scroll to section on click
+const links = document.querySelectorAll('nav a');
+const navHeight = document.querySelector('nav').offsetHeight;
+
+links.forEach(link => {
+  link.addEventListener('click', function(event) {
+    event.preventDefault();
+
+    const target = document.querySelector(this.getAttribute('href'));
+    const targetPosition = target.getBoundingClientRect().top + window.scrollY - navHeight;
+
+    window.scrollTo({
+      top: targetPosition,
+      behavior: 'smooth'
+    });
+  });
+});
+
+
