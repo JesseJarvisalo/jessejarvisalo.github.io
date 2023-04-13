@@ -138,7 +138,8 @@ button:hover {
 .h2-bolder {
   font-family: 'Jost', sans-serif;
   font-weight: 900;
-  font-size: 2.5rem;
+  font-size: 2.2rem;
+  line-height: 3rem;
   margin-bottom: 0;
 }
 
@@ -351,7 +352,7 @@ hr {
     text-align: center;
   }
 
-  .portfolio {
+  .portfolio, .tyopaikkakokemus {
     display: flex;
     flex-direction: column;
     width: 90%;
@@ -380,5 +381,9 @@ hr {
   footer a:hover {
     text-decoration: solid 2px underline black;
     text-underline-offset: 0.2rem;
+  }
+
+  hr {
+    width: 100%;
   }
 }
