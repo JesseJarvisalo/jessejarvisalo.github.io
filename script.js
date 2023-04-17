@@ -33,13 +33,9 @@ const observer = new IntersectionObserver(entries => {
       const navLink = document.querySelector(`nav a[href=".${sectionClass}"]`);
       navLinks.forEach(link => link.classList.remove('active'));
       navLink.classList.add('active');
-    } else {
-      const sectionClass = entry.target.getAttribute('class');
-      const navLink = document.querySelector(`nav a[href=".${sectionClass}"]`);
-      navLink.classList.remove('active');
     }
   });
-}, { rootMargin: '-50% 0px -50% 0px' });
+}, { rootMargin: '-50% 0px -49% 0px' });
 
 sections.forEach(section => {
   observer.observe(section);
