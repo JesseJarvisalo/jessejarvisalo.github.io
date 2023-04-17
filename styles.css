@@ -405,20 +405,6 @@ hr {
     margin: auto auto 2rem auto;
   }
 
-  footer ul {
-    justify-content: center;
-    margin: 0 auto;
-  }
-  
-  footer li {
-    padding: 0 2rem;
-  }
-
-  footer a:hover {
-    text-decoration: solid 2px underline black;
-    text-underline-offset: 0.2rem;
-  }
-
   hr {
     width: 100%;
   }
