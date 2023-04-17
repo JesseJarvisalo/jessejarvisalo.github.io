@@ -33,6 +33,10 @@ const observer = new IntersectionObserver(entries => {
       const navLink = document.querySelector(`nav a[href=".${sectionClass}"]`);
       navLinks.forEach(link => link.classList.remove('active'));
       navLink.classList.add('active');
+    } else {
+      const sectionClass = entry.target.getAttribute('class');
+      const navLink = document.querySelector(`nav a[href=".${sectionClass}"]`);
+      navLink.classList.remove('active');
     }
   });
 }, { rootMargin: '-50% 0px -50% 0px' });
@@ -60,4 +64,5 @@ const contactBar = document.querySelector('.contact-bar');
 button.addEventListener('click', () => {
   contactBar.classList.toggle('open');
 });
+
 
