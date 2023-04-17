@@ -41,7 +41,6 @@ sections.forEach(section => {
   observer.observe(section);
 });
 
-// Smooth scroll to section on click
 navLinks.forEach(link => {
   link.addEventListener('click', function(event) {
     event.preventDefault();
@@ -54,35 +53,11 @@ navLinks.forEach(link => {
   });
 });
 
-// Disable click event on inactive nav links
-function disableNavLinks() {
-  navLinks.forEach(link => {
-    link.removeEventListener('click', scrollOnClick);
-  });
-}
+// contact bar animation
+const button = document.querySelector('.ota-yhteytta button');
+const contactBar = document.querySelector('.contact-bar');
 
-// Enable click event on active nav link
-function enableNavLink(link) {
-  link.addEventListener('click', scrollOnClick);
-}
-
-// Handle click event on nav links
-function scrollOnClick(event) {
-  event.preventDefault();
-  disableNavLinks();
-
-  const target = document.querySelector(this.getAttribute('href'));
-  const targetPosition = target.getBoundingClientRect().top + window.scrollY - navHeight;
-
-  window.scrollTo({
-    top: targetPosition,
-    behavior: 'smooth'
-  });
-
-  enableNavLink(this);
-}
-
-// Initialize the first active nav link
-enableNavLink(navLinks[0]);
-
+button.addEventListener('click', () => {
+  contactBar.classList.toggle('open');
+});
 

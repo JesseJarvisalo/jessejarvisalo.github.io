@@ -34,7 +34,9 @@ html, body {
 
 body {
   position: relative;
-  background-color: #f1eeef;
+  background-image: url("Taustakuva.jpg");
+  background-repeat: repeat;
+  background-size: 430px 430px;
 }
 
 body::before {
@@ -46,6 +48,7 @@ body::before {
   bottom: 0;
   z-index: -1; /* This will place the pseudo-element behind the other elements */
   background-color: white;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
 /* navigaation osat */ 
